@@ -1,0 +1,8 @@
+rootProject.name = 'kanban-tool'
+
+include 'gateway-service'
+include 'discovery-service'
+include 'config-service'
+include 'backlog-service'
+include 'project-service'
+include 'projecttask-service'

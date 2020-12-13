@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: project-service
+  cloud:
+    config:
+      uri: http://localhost:9000
+      username: admin
+      password: admin1234
