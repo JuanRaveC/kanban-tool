@@ -74,7 +74,7 @@ public class TaskController {
     @GetMapping("/hours/project/{id}/{status}")
     public ResponseEntity<Double> getHoursByProject(@PathVariable("id") String id,
                                                      @PathVariable("status") TaskStatus status){
-        Double foundTasks = service.getHoursByProject(id, status);
+        Double foundTasks = service.getHoursByProjectAndTaskStatus(id, status);
         if(foundTasks == 0){
             return ResponseEntity.noContent().build();
         }else {

@@ -5,6 +5,7 @@ import co.com.poli.backlogservice.model.Backlog;
 import co.com.poli.backlogservice.model.Project;
 import co.com.poli.backlogservice.project.ProjectClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class BacklogServiceImpl implements BacklogService{
     private List<Backlog> backlogs ;
     private final ProjectClient projectClient;
 
-    public BacklogServiceImpl(ProjectClient projectClient) {
+    public BacklogServiceImpl(@Qualifier("project-service") ProjectClient projectClient) {
         this.backlogs = new ArrayList<>();
         this.projectClient = projectClient;
     }

@@ -1,13 +1,14 @@
-package co.com.poli.kanbantool;
+package co.com.poli.adminservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KanbanToolApplication {
+@EnableAdminServer
+public class AdminServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KanbanToolApplication.class, args);
+		SpringApplication.run(AdminServiceApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package co.com.poli.kanbantool;
+package co.com.poli.adminservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KanbanToolApplicationTests {
+class AdminServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

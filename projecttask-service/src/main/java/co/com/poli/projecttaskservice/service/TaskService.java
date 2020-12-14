@@ -11,6 +11,6 @@ public interface TaskService {
     TaskDto createTask(TaskDto taskDto);
     List<TaskDto> getAllTaskByProject(String id);
     Double getProjectTotalHours(String id);
-    Double getHoursByProject(String id,TaskStatus status);
+    Double getHoursByProjectAndTaskStatus(String id, TaskStatus status);
     TaskDto deleteTask(Long taskId);
 }

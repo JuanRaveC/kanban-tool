@@ -5,11 +5,11 @@ spring:
     config:
       server:
         git:
-          uri: file:///C:/Users/USUARIO/Documents/Universidad/cloud/kanban-tool/config-data
+          uri: file:///C:/Users/USUARIO/Documents/Universidad/cloud/kaban-tool/config-data
   security:
     user:
-      name: ${CONFIG_USER}
-      password: ${CONFIG_PASSWORD}
+      name: admin
+      password: admin1234
 server:
   port: 9000
 
