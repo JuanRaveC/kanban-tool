@@ -85,4 +85,32 @@ public class TaskServiceImplTest {
 
         assertEquals(totalHours, expected);
     }
+
+    @Test
+    public void getHoursByProjectAndTaskStatusWithStatusInProgress() {
+        TaskServiceImpl service = new TaskServiceImpl(projectClient);
+        Double expected = 20D;
+        TaskDto taskDto = TaskDto.builder()
+                .id(68786L)
+                .name("Task Test")
+                .summary("Summary Test")
+                .hours(20D)
+                .status(TaskStatus.IN_PROGRESS)
+                .projectIdentifier("798789")
+                .build();
+        TaskDto taskDto2 = TaskDto.builder()
+                .id(68786334L)
+                .name("Task Test")
+                .summary("Summary Test")
+                .hours(15D)
+                .status(TaskStatus.COMPLETED)
+                .projectIdentifier("798789")
+                .build();
+        service.createTaskWithOutProject(taskDto);
+        service.createTaskWithOutProject(taskDto2);
+
+        Double totalHours = service.getHoursByProjectAndTaskStatus("798789",TaskStatus.IN_PROGRESS);
+
+        assertEquals(totalHours, expected);
+    }
 }
